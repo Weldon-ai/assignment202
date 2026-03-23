@@ -10,10 +10,20 @@
     .menu a { color:white; font-weight:bold; margin:0 10px; font-size:16px; text-decoration:none; }
     .menu a:hover { text-decoration:underline; }
     h1,h2 { text-align:center; }
-    img { display:block; margin:10px auto; border-radius:50%; width:150px; height:200px; object-fit:cover; }
-    p { margin:8px 0; padding:0 10px; }
     hr { border:0; height:1px; background:#004d00; margin:15px 0; }
     .download { display:block; text-align:center; margin:20px 0; }
+    
+    /* Profile section with image on left */
+    .profile { display:flex; flex-wrap:wrap; align-items:flex-start; max-width:900px; margin:20px auto; }
+    .profile img { border-radius:50%; width:150px; height:200px; object-fit:cover; margin-right:20px; }
+    .profile .about { flex:1; min-width:200px; }
+
+    p { margin:8px 0; padding:0; }
+
+    @media screen and (max-width:768px) {
+        .profile { flex-direction:column; align-items:center; text-align:center; }
+        .profile img { margin:0 0 15px 0; }
+    }
 </style>
 </head>
 <body>
@@ -30,16 +40,20 @@
 <h2>CURRICULUM VITAE (CV)</h2>
 <h1>IN16/00033/24 WELDON KIPCHIRCHIR</h1>
 
-<img src="myphoto.jpg" alt="My Photo">
-
 <hr>
 
-<h2>About Me</h2>
-<p>My name is Weldon Kipchirchir Cheserek.</p>
-<p>I am currently pursuing a Bachelor of Science in Software Engineering at Kisii University.</p>
-<p>I completed my secondary education at St. Joseph Boys Kitale and primary at Rorok Primary School.</p>
-<p>I am passionate about programming and building applications.</p>
-<p>After completing my course, I hope to become a professional software engineer.</p>
+<!-- Profile section -->
+<div class="profile">
+    <img src="myphoto.jpg" alt="My Photo">
+    <div class="about">
+        <h2>About Me</h2>
+        <p>My name is Weldon Kipchirchir Cheserek.</p>
+        <p>I am currently pursuing a Bachelor of Science in Software Engineering at Kisii University.</p>
+        <p>I completed my secondary education at St. Joseph Boys Kitale and primary at Rorok Primary School.</p>
+        <p>I am passionate about programming and building applications.</p>
+        <p>After completing my course, I hope to become a professional software engineer.</p>
+    </div>
+</div>
 
 <hr>
 
